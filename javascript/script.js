@@ -44,9 +44,9 @@ const contadorPagina = document.getElementById("contadorPagina");
 let paginaAtual = 0;
 
 let paginas = [];
-let htmlSkins = "<h3>Detalhes das skins</h3>";
-let htmlBrawlers = "<h3>Detalhes dos brawlers</h3>";
-let htmlEmojis = "<h3>Detalhes dos emojis</h3>";
+let htmlSkins = "<h4>Detalhes das skins</h4>";
+let htmlBrawlers = "<h4>Detalhes dos brawlers</h4>";
+let htmlEmojis = "<h4>Detalhes dos emojis</h4>";
 
 function Calcular(){
     console.log("Clicou");
@@ -124,7 +124,7 @@ function Calcular(){
         valorIcone + valorGadget + valorStarPower + valorBuffies + valorHyper + brawlerValor;
 
     resultado.innerHTML = `
-    <h3>Seus dados</h3> 
+    <h3 class = "dados">Seus dados</h3> 
     <p>Suas skins valem: ${totalGemasSkins.toLocaleString("pt-BR", {minimumFractionDigits: 0, maximumFractionDigits: 0})} gemas</p>
     <p>Seus emojis valem: ${totalGemasEmoji.toLocaleString("pt-BR", {minimumFractionDigits: 0, maximumFractionDigits: 0})} gemas</p>
     <p>Icones valem: ${valorIcone.toLocaleString("pt-BR", {minimumFractionDigits: 0, maximumFractionDigits: 0})} gemas</p> 
@@ -134,7 +134,6 @@ function Calcular(){
     <p>Hypercargas valem: ${valorHyper.toLocaleString("pt-BR", {minimumFractionDigits: 0, maximumFractionDigits: 0})} gemas</p>
     <p>Desenvolvimento dos seus brawlers valem: ${brawlerValor.toLocaleString("pt-BR", {minimumFractionDigits: 0, maximumFractionDigits: 0})} gemas</p>
     <p>Seus cosméticos, itens e progresso da sua conta equivalem a: ${valorConta.toLocaleString("pt-BR", {minimumFractionDigits: 0, maximumFractionDigits: 0})} gemas</p>
-    
     `;
 
     paginas = [htmlSkins, htmlBrawlers, htmlEmojis];
@@ -198,12 +197,13 @@ function PaginaAnterior(){
     }
 }
 
-
-
-
-
-
 btnCalcular.addEventListener("click", Calcular);
+btnCalcular.addEventListener("click", function(){
+    window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: "smooth"
+    });
+});
 btnDetalhes.addEventListener("click", AbrirPopup);
 btnFechar.addEventListener("click", FecharPopup);
 btnProximo.addEventListener("click", ProximaPagina);

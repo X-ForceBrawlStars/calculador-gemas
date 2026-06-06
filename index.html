@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>X-Force</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
     
@@ -13,7 +14,7 @@
         <h1 class="title">X-Force</h1>
 
         <section>
-        <h2>Skins</h2>
+        <h2 class="subtitle">Skins</h2>
 
         <div class="campo">
             <label for="skinRara">Rara</label>
@@ -59,7 +60,7 @@
 
         <section>
             
-        <h2>Emojis</h2>
+        <h2 class="subtitle">Emojis</h2>
 
         <div class="campo">
             <label for="emojiComum">Comum</label>
@@ -80,7 +81,7 @@
 
         <section>
 
-        <h2>Outros itens</h2>
+        <h2 class="subtitle">Outros itens</h2>
 
         <div class="campo">
             <label for="icone">Ícones</label>
@@ -111,7 +112,7 @@
 
         <section>
 
-        <h2>Brawlers</h2>
+        <h2 class="subtitle">Brawlers</h2>
 
         <div class="campo">
             <label for="contBrawler">Total de brawlers</label>
@@ -126,29 +127,31 @@
 
         <br>
 
-        <button id="calcular">Calcular</button>
+        <div class="btn">
+            <button id="calcular">Calcular</button>
+        </div>
 
         <div id="resultado">
+            
 
         </div>
 
-        <button id="btnDetalhes">
-            Detalhes
-        </button>
+        <a id="btnDetalhes">Detalhes</a>
 
         <div id="popup">
+
             <div id="popupConteudo">
-                <h2>Detalhes</h2>
+                <h3>Detalhes</h3>
 
                 <div id="paginaDetalhes"></div>
 
                 <div id="navegacao">
-                    <button id="btnAnterior">Volta</button>
+                    <button id="btnAnterior"><i class="fa-solid fa-arrow-left"></i></button>
                     <span id="contadorPagina">1/2</span>
-                    <button id="btnProximo">Avança</button>
+                    <button id="btnProximo"><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
-                <button id="btnFechar">Fechar</button>
+                <button id="btnFechar"><i class="fa-solid fa-xmark"></i></button>
 
             </div>
             
