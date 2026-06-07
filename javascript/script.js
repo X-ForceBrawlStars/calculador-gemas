@@ -44,9 +44,9 @@ const contadorPagina = document.getElementById("contadorPagina");
 let paginaAtual = 0;
 
 let paginas = [];
-let htmlSkins = "<h4>Detalhes das skins</h4>";
-let htmlBrawlers = "<h4>Detalhes dos brawlers</h4>";
-let htmlEmojis = "<h4>Detalhes dos emojis</h4>";
+let htmlSkins = "<h5>Detalhes das skins</h4>";
+let htmlBrawlers = "<h5>Detalhes dos brawlers</h4>";
+let htmlEmojis = "<h5>Detalhes dos emojis</h4>";
 
 function Calcular(){
     console.log("Clicou");
@@ -149,7 +149,7 @@ function GerarCampos(){
         <div class = "campo">
         <br>
         <label>Nível ${nivel}</label>
-        <input type = "number" min = "0" id = "nivel${nivel}">
+        <input type = "number" min = "0" id = "nivel${nivel}" class = "form-control">
         </div>`;
     }
 }

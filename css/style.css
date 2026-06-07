@@ -57,9 +57,10 @@ h2{
 
 }
 
-.btn{
+.btnContainer{
     justify-content: center;
     text-align: center;
+    align-items: center;
 }
 
 #calcular{
@@ -125,4 +126,15 @@ h2{
     font-size: 20px;
 }
 
+.link-instagram{
+    font-size: 2.0rem;
+    color: red;
+}
 
+#btnProximo,
+#btnAnterior,
+#btnFechar{
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+}
