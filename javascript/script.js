@@ -15,9 +15,7 @@ const emojiColecionador = document.getElementById("emojiColecionador");
 const icone = document.getElementById("icone");
 const gadget = document.getElementById("gadget");
 const spray = document.getElementById("spray");
-const gearS = document.getElementById("gearS");
-const gearE = document.getElementById("gearE");
-const gearM = document.getElementById("gearM");
+const gear = document.getElementById("gear");
 const starPower = document.getElementById("starPower");
 const buffies = document.getElementById("buffies");
 const hyper = document.getElementById("hyper");
@@ -99,9 +97,7 @@ function Calcular(){
     const valorIcone = Number(icone.value) * 19;
     const valorGadget = Number(gadget.value) * 100;
     const valorSpray = Number(spray.value) * 29;
-    const valorGearS = Number(gearS.value) * 100;
-    const valorGearE = Number(gearE.value) * 150;
-    const valorGearM = Number(gearM.value) * 200;
+    const valorGear = Number(gear.value) * 100;
     const valorStarPower = Number(starPower.value) * 200;
     const valorBuffies = Number(buffies.value) * 300;
     const valorHyper = Number(hyper.value) * 500;
@@ -130,7 +126,7 @@ function Calcular(){
     }
 
     const valorConta = totalGemasSkins + totalGemasEmoji +
-        valorIcone + valorSpray + valorGadget + valorGearS + valorGearE + valorGearM + valorStarPower + valorBuffies + valorHyper + brawlerValor;
+        valorIcone + valorSpray + valorGadget + valorGear + valorStarPower + valorBuffies + valorHyper + brawlerValor;
 
     resultado.innerHTML = `
     <h3 class = "dados">Seus dados</h3> 
@@ -139,9 +135,7 @@ function Calcular(){
     <p>Icones valem: ${valorIcone.toLocaleString("pt-BR", {minimumFractionDigits: 0, maximumFractionDigits: 0})} gemas</p>
     <p>Sprays valem: ${valorSpray.toLocaleString("pt-BR", {minimumFractionDigits: 0, maximumFractionDigits: 0})} gemas</p>  
     <p>Acessórios valem: ${valorGadget.toLocaleString("pt-BR", {minimumFractionDigits: 0, maximumFractionDigits: 0})} gemas</p> 
-    <p>Engrenagens super rara valem: ${valorGearS.toLocaleString("pt-BR", {minimumFractionDigits: 0, maximumFractionDigits: 0})} gemas</p>
-    <p>Engrenagens épicas valem: ${valorGearE.toLocaleString("pt-BR", {minimumFractionDigits: 0, maximumFractionDigits: 0})} gemas</p>
-    <p>Engrenagens míticas valem: ${valorGearM.toLocaleString("pt-BR", {minimumFractionDigits: 0, maximumFractionDigits: 0})} gemas</p>
+    <p>Engrenagens valem: ${valorGear.toLocaleString("pt-BR", {minimumFractionDigits: 0, maximumFractionDigits: 0})} gemas</p>
     <p>Poderes de estrela valem: ${valorStarPower.toLocaleString("pt-BR", {minimumFractionDigits: 0, maximumFractionDigits: 0})} gemas</p> 
     <p>Buffies valem: ${valorBuffies.toLocaleString("pt-BR", {minimumFractionDigits: 0, maximumFractionDigits: 0})} gemas</p> 
     <p>Hypercargas valem: ${valorHyper.toLocaleString("pt-BR", {minimumFractionDigits: 0, maximumFractionDigits: 0})} gemas</p>
