@@ -32,7 +32,7 @@ const emojisValor = [];
 const skinsValor = [];
 const contBrawler = document.getElementById("contBrawler");
 const niveisBrawlers = document.getElementById("niveisBrawlers"); 
-const valoresBrawler = [424, 276.5, 180, 114, 69, 42, 22, 12.5, 6.5, 4, 0];
+const valoresBrawler = [424, 276.5, 180, 114, 69, 42, 22, 12.5, 6.5, 4];
 const nomesSkins = ["Rara", "Super Rara", "Épica", "Mítica", "Lendária", "Hyper", "Prateada", "Dourada"];
 const nomesEmojis = ["Comum", "Raro", "Épico", "Colecionador"];
 
@@ -76,11 +76,21 @@ function Calcular(){
     console.log(somaNiveis);
 
     let brawlerValor = 0;
+    let lvl = 11;
     const gemasNivel = [];
 
     for(let i = 0; i < niveis.length; i++){
-        brawlerValor += niveis[i] * valoresBrawler[i];
-        gemasNivel[i] = niveis[i] * valoresBrawler[i];
+        gemasNivel[i] = 0;
+        let cont = 0;
+        for(let j = 0 + i; j < valoresBrawler.length; j++){
+            console.log("entrou no loop j");
+            gemasNivel[i] = gemasNivel[i] + valoresBrawler[j];
+            cont = j;
+            console.log("valor atual: ", cont);
+        }
+        console.log("passou do j");
+        gemasNivel[i] *= niveis[i];
+        brawlerValor += gemasNivel[i];
     }
 
     for(let i = 0; i < gemasNivel.length; i++){
@@ -139,8 +149,8 @@ function Calcular(){
     <p>Poderes de estrela valem: ${valorStarPower.toLocaleString("pt-BR", {minimumFractionDigits: 0, maximumFractionDigits: 0})} gemas</p> 
     <p>Buffies valem: ${valorBuffies.toLocaleString("pt-BR", {minimumFractionDigits: 0, maximumFractionDigits: 0})} gemas</p> 
     <p>Hypercargas valem: ${valorHyper.toLocaleString("pt-BR", {minimumFractionDigits: 0, maximumFractionDigits: 0})} gemas</p>
-    <p>Desenvolvimento dos seus brawlers valem: ${brawlerValor.toLocaleString("pt-BR", {minimumFractionDigits: 0, maximumFractionDigits: 0})} gemas</p>
-    <p>Seus cosméticos, itens e progresso da sua conta equivalem a: ${valorConta.toLocaleString("pt-BR", {minimumFractionDigits: 0, maximumFractionDigits: 0})} gemas</p>
+    <p>Desenvolvimento dos seus brawlers valem: ${brawlerValor.toLocaleString("pt-BR", {minimumFractionDigits: 1, maximumFractionDigits: 1})} gemas</p>
+    <p>Seus cosméticos, itens e progresso da sua conta equivalem a: ${valorConta.toLocaleString("pt-BR", {minimumFractionDigits: 1, maximumFractionDigits: 1})} gemas</p>
     `;
 
     paginas = [htmlSkins, htmlBrawlers, htmlEmojis];
